@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler"
+        android:layout_above="@id/bottomLayout"
+        android:padding="8dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/welocmeTxt"
+        android:layout_centerInParent="true"
+        android:text="Welcome to Easy Chat Gpt\n Try it out now"
+        android:gravity="center"
+        android:textSize="25dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottomLayout">
+
+        <EditText
+            android:id="@+id/edtMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toLeftOf="@id/imageButtonEnter"
+            android:background="@drawable/rounded_back"
+            android:ems="10"
+            android:hint="Write here"
+            android:inputType="textPersonName"
+            android:padding="16dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonEnter"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/baseline_send_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:padding="8dp"
+            android:layout_marginRight="5dp"
+            android:background="?attr/selectableItemBackground"/>
+    </RelativeLayout>
+</RelativeLayout>
